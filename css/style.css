@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background: #0d0d0d;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #6a5acd;
+}
+
+/* Conteúdo principal */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.text h1 span {
+  color: #6a5acd;
+}
+
+.text p {
+  margin: 20px 0;
+  color: #ccc;
+  max-width: 400px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6a5acd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #836fff;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 300px;
+  margin-top: 30px;
+}
+
+.image img {
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* Seções */
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 60vh;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #6a5acd;
+}
+
+section p, section a {
+  color: #ccc;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+section a:hover {
+  color: #836fff;
+}
+
+/* Relógio */
+.clock {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    justify-content: center;
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .text p {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

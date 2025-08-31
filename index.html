@@ -3,157 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoderGirl Portifólio</title>
-
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #0d0d0d;
-      color: white;
-      min-height: 100vh;
-    }
-
-    /* ====== MENU ====== */
-    header {
-      width: 100%;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    .menu li a {
-      text-decoration: none;
-      color: #ccc;
-      transition: 0.3s;
-    }
-
-    .menu li a:hover {
-      color: #6a5acd;
-    }
-
-    /* ====== CONTEÚDO ====== */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 50px;
-      position: relative;
-      flex-wrap: wrap; /* garante responsividade */
-    }
-
-    .text {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .text h1 {
-      font-size: 3rem;
-      line-height: 1.2;
-    }
-
-    .text h1 span {
-      color: #6a5acd;
-    }
-
-    .text p {
-      margin: 20px 0;
-      color: #ccc;
-      max-width: 400px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #6a5acd;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #836fff;
-    }
-
-    /* ====== IMAGEM ====== */
-    .image {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      min-width: 300px;
-      margin-top: 30px; /* espaço em telas pequenas */
-    }
-
-    .image img {
-      max-width: 400px; /* tamanho máximo da imagem */
-      border-radius: 15px; /* cantos arredondados */
-      opacity: 1; /* totalmente visível */
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5); /* sombra */
-    }
-
-    /* ====== RELÓGIO ====== */
-    .clock {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 2rem;
-      color: white;
-      opacity: 0.8;
-    }
-  </style>
+  <title>CoderGirl Portfólio</title>
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
 </head>
 <body>
   <!-- MENU -->
   <header>
     <nav>
-      <h2 class="logo">Portfólio Profissional</h2>
+      <h2 class="logo">🌐Desenvolvedora Web</h2>
       <ul class="menu">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre mim</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contatos</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#Consultoria">Consultoria</a></li>
+        <li><a href="#contatos">Contatos</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="container">
-    <!-- Texto -->
     <div class="text">
-      <h1>Olá,<br> Essa sou eu, <span>CoderGirl</span></h1>
+      <h1>Olá,<br> Eu me chamo Júlia e sou uma <span>CoderGirl</span></h1>
       <p>Atualmente sou desenvolvedora Full-Stack em aprendizado, criando projetos e evoluindo a cada dia.</p>
-      <a href="#" class="btn"> Meus Desenvolvimentos</a>
+      <a href="#" class="btn">Contrate Meus Serviços Aqui💻</a>
     </div>
 
-    <!-- Imagem -->
     <div class="image">
       <img src="img/minhafoto.jpeg" alt="Minha Foto">
     </div>
 
-    <!-- Relógio -->
     <div class="clock"></div>
   </main>
+
+  <!-- SEÇÃO SOBRE MIM -->
+  <section id="sobre">
+    <h2>👩‍💻Sobre mim</h2>
+    <p>Sou estudante de Segurança da Informação e estou no terceiro período da faculdade.</p>
+    <p>Aprendo e aplico linguagens de programação como: Python, HTML, CSS e JavaScript para desenvolvimento.</p>
+  </section>
+
+  <!-- SEÇÃO SERVIÇOS DE CONSULTORIA -->
+  <section id="Consultoria">
+    <h2>📈Serviços de Consultoria</h2>
+    <p>Ofereço consultoria em segurança da informação, desenvolvimento web e boas práticas de programação.</p>
+    <p>Auxílio empresas e profissionais a melhorar a segurança de seus sistemas e processos digitais.</p>
+  </section>
+
+  <!-- SEÇÃO CONTATOS -->
+  <section id="contatos">
+    <h2>📞Entre em contato</h2>
+    <a href="https://github.com/julia241005" target="_blank">GitHub: github.com/julia241005</a>
+    <a href="https://www.linkedin.com/in/julia-duarte-809857243" target="_blank">LinkedIn: julia-duarte-809857243</a>
+    <a href="tel:+5511940553457">Telefone: +55 11 94055-3457</a>
+  </section>
+
+  <!-- Script do relógio -->
+  <script>
+    function updateClock() {
+      const clock = document.querySelector('.clock');
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
